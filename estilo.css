@@ -1,0 +1,242 @@
+body{
+    width: 100%;
+    height: 50%;
+	font-family: Helvetica,sans-serif;
+}
+#wrap{
+    width: 100%;
+    height: 80%;
+    margin: auto;
+    background: #e3e3e3;
+    overflow: hidden;
+}
+input[type=text],select{
+    float: center;
+	border: 5px solid #fff;
+	border-radius: 5px;
+    width: 50%;
+    height: 50%;
+	display: block;
+}
+input[type=number]{
+    float: center;
+	border: 5px solid #fff;
+	border-radius: 5px;
+    width: 25%;
+    height: 50%;
+}
+.rodape{
+    width: 100%;
+    height: 50px;
+    background-color:	#495868;
+    display:block;
+    float: center;
+    padding: 1% 1%;
+	text-align: center;
+}
+.copyright{
+	margin-top: 2%;
+	color: rgba(255,255,255,0.7);
+}
+.btn-descritiva{
+    font-size: 100%;
+    margin: 0% 4% 0% 4%;
+    float: center;
+    cursor: pointer;
+    border: 1.5px solid;
+    border-radius: 5px;
+    padding: 15px;
+    width: 35%;
+    box-shadow: 1px 1px 0px #000000;
+}
+.btn-descritiva:active{
+    top:5px;
+    position: relative;
+    box-shadow: none;
+}
+h1{
+    text-align: center;
+}
+.label{
+    font-size:20px;
+}
+.cabecalho{
+    background-color: #495868;
+}
+header label{
+    color: #efefef;
+    font-size: 25px;
+    display: block;
+    padding: 5px 10px;
+    width: 20px;
+    display: none;
+}
+header label:hover{
+    background-color: #0c0a08;
+}
+#btn-menu{
+    display:none;
+}
+.menu ul{
+    list-style: none;
+    margin: 0px 100px;
+    padding: 0;
+    display: flex;
+}
+.menu .menu-link{
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    margin: 0px 10px;
+    
+}
+.menu-link:hover{
+	text-decoration: underline;
+}
+form{
+    margin:auto;
+    font-weight: bold;
+    display: block;
+    padding: 40px 40px 70px 40px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color:rgb(20, 20, 20);
+}
+.form-medidas{
+    padding: 0px 40px 70px 50px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color:rgb(20, 20, 20);
+}
+.form-home{
+    padding: 40px 100px 200px 80px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color:rgb(20, 20, 20);
+}
+.form-probabilidade{
+    padding: 40px 100px 200px 80px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color:rgb(20, 20, 20);
+}
+.medidas{
+    float: center;
+	border: 5px solid #fff;
+	border-radius: 5px;
+    width: 25%;
+    height: 50%;
+	display: block;
+}
+.btn-link{
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 50%;
+    margin-left: 30%;
+    margin-top: 40px;
+    margin-bottom:40px;
+    padding: 15px;
+    display: inline-block;
+    text-decoration: none;
+    background: #495868;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    border-style: solid;
+    border-color: rgb(27, 27, 27);
+    border-width: 2px;
+    width: 35%;
+}
+.btn-link:active{
+    top:5px;
+    position: relative;
+    box-shadow: none;
+}
+.titulo{
+    float: center;
+    background: #e3e3e3;
+    margin:auto;
+    border-style:solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-width: 1.5px;
+    padding:20px;
+}
+.fas .fa-chart-bar{
+    margin: 3px;
+}
+.scroll{
+    overflow: auto;
+}
+/*########################### Tabela ###########################*/
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #030303;
+}
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1.5px solid #000000;
+}
+th {
+    text-align: inherit;
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+.tabela-cor {
+    color: rgb(236, 236, 236);
+    background-color: #495868;
+}
+table {
+    border-collapse: collapse;
+}
+table {
+    margin: auto;
+    text-align: center;
+    display: table;
+    border-spacing: 1.5px;
+    border-color: #e3e3e365;
+    border-style: solid;
+    border-width: 2px;
+}
+#resultados{
+    margin:80px 0px 30px 50px;
+    font-size: 20px;
+    text-align: center;
+}
+/*Small devices - Smartphones*/
+@media screen and (max-width: 768px){
+    h1{
+        font-weight: 400;
+    }
+    .label{
+        font-size: 15px;
+    }
+
+    header label{
+        display: block;
+    }
+    .menu ul{
+        position: absolute;
+        background-color: #495868;
+        width: 70%;
+        flex-direction: column;
+        margin-left: -70%;
+    }
+    .menu li a{
+        border-top: 1px solid #efefef;
+    }
+    #btn-menu:checked ~ .menu ul{
+        margin-left: 0;
+        
+    }
+
+}
