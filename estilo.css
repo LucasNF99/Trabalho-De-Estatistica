@@ -14,7 +14,7 @@ input[type=text],select{
     float: center;
 	border: 5px solid #fff;
 	border-radius: 5px;
-    width: 50%;
+    width: 60%;
     height: 50%;
 	display: block;
 }
@@ -40,7 +40,7 @@ input[type=number]{
 }
 .btn-descritiva{
     font-size: 100%;
-    margin: 0% 4% 0% 4%;
+    margin: 0% 4% 0% 30%;
     float: center;
     cursor: pointer;
     border: 1.5px solid;
@@ -49,10 +49,32 @@ input[type=number]{
     width: 35%;
     box-shadow: 1px 1px 0px #000000;
 }
+.btn-probabilidade{
+    margin: 0% 4% 10% 30%;
+    float: center;
+    cursor: pointer;
+    border: 1.5px solid;
+    border-radius: 5px;
+    padding: 15px;
+    width: 35%;
+    box-shadow: 1px 1px 0px #000000;
+}
+.btn-probabilidade:active{
+    top:5px;
+    position: relative;
+    box-shadow: none;
+}
 .btn-descritiva:active{
     top:5px;
     position: relative;
     box-shadow: none;
+}
+.title2{
+    text-align: center;
+    margin: auto;
+    padding: 22px 10px 22px 30%;
+    display: flex;
+    background-color: #efefef;
 }
 h1{
     text-align: center;
@@ -77,11 +99,45 @@ header label:hover{
 #btn-menu{
     display:none;
 }
-.menu ul{
+.menu .priItem{
     list-style: none;
     margin: 0px 100px;
     padding: 0;
     display: flex;
+}
+.dropdown{
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+
+}
+.dropdown:hover{
+     overflow: visible; 
+}
+.subItem{
+    list-style: none;
+    display: block;
+    position: absolute;
+    top: 100%;
+    margin: 0;
+    padding: 0;
+}
+.subLink{
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    margin: 0px 10px;
+    background-color: #495868;
+    color: #fff;
+    border-top: 1px solid;
+    border-color: #cac9c9;
+    font-size: 90%;
+}
+.subLink:hover{
+    background-color: #cac9c9;
+    color: #495868;
 }
 .menu .menu-link{
     color: #fff;
@@ -89,22 +145,22 @@ header label:hover{
     padding: 15px 20px;
     display: block;
     margin: 0px 10px;
-    
 }
 .menu-link:hover{
-	text-decoration: underline;
+    background-color: #cac9c9;
+    color: #495868;
 }
 form{
     margin:auto;
     font-weight: bold;
     display: block;
-    padding: 40px 40px 70px 40px;
+    padding: 40px 40px 70px 25%;
     font-size: 1.2rem;
     line-height: 1.5rem;
     color:rgb(20, 20, 20);
 }
 .form-medidas{
-    padding: 0px 40px 70px 50px;
+    padding: 0px 40px 70px 25%;
     font-size: 1.2rem;
     line-height: 1.5rem;
     color:rgb(20, 20, 20);
@@ -116,7 +172,7 @@ form{
     color:rgb(20, 20, 20);
 }
 .form-probabilidade{
-    padding: 40px 100px 200px 80px;
+    padding: 40px 100px 100px 25%;
     font-size: 1.2rem;
     line-height: 1.5rem;
     color:rgb(20, 20, 20);
@@ -224,7 +280,7 @@ table {
     header label{
         display: block;
     }
-    .menu ul{
+    .menu .priItem{
         position: absolute;
         background-color: #495868;
         width: 70%;
@@ -234,9 +290,23 @@ table {
     .menu li a{
         border-top: 1px solid #efefef;
     }
-    #btn-menu:checked ~ .menu ul{
+    #btn-menu:checked ~ .menu .priItem{
         margin-left: 0;
         
     }
-
+    input,select{
+        float: center;
+        display: block;
+    }
+    .btn-link{
+        font-weight: 400;
+        text-align: center;
+        padding: 50%;
+        margin-bottom:40px;
+        padding: 15px;
+        text-decoration: black;
+        background: #495868;
+        border-style: solid;
+        border-width: 2px;
+    }
 }
