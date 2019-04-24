@@ -227,6 +227,13 @@ form{
 .scroll{
     overflow: auto;
 }
+.explica{
+    font: bold;
+    color: rgba(20, 20, 20, 0.74);
+}
+h2{
+    text-align: center;
+}
 /*########################### Tabela ###########################*/
 .table thead th {
     vertical-align: bottom;
@@ -265,6 +272,10 @@ table {
 }
 #resultados{
     margin:80px 0px 30px 50px;
+    font-size: 20px;
+    text-align: center;
+}
+#resultados2{
     font-size: 20px;
     text-align: center;
 }
