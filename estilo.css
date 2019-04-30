@@ -18,6 +18,16 @@ input[type=text],select{
     height: 50%;
 	display: block;
 }
+input[type=email],input[type=password]{
+    float: center;
+	border: 5px solid #fff;
+	border-radius: 5px;
+    width: 60%;
+    height: 50%;
+    display: block;
+    margin: 5px;
+    padding: 5px;
+}
 input[type=number]{
     float: center;
 	border: 5px solid #fff;
@@ -65,6 +75,22 @@ input[type=number]{
     box-shadow: none;
 }
 .btn-descritiva:active{
+    top:5px;
+    position: relative;
+    box-shadow: none;
+}
+.btn-login{
+    margin: 0% 4% 0% 50%;
+    float: center;
+    cursor: pointer;
+    border: 1.5px solid;
+    border-radius: 5px;
+    padding: 10px;
+    width: 10%;
+    box-shadow: 1px 1px 0px #000000;
+    position: relative;
+}
+.btn-login:active{
     top:5px;
     position: relative;
     box-shadow: none;
@@ -159,23 +185,23 @@ form{
     line-height: 1.5rem;
     color:rgb(20, 20, 20);
 }
-.form-medidas{
-    padding: 0px 40px 70px 25%;
+.login{
+    margin:auto;
+    font-weight: bold;
+    display: block;
+    padding: 100px 40px 10% 25%;
     font-size: 1.2rem;
     line-height: 1.5rem;
     color:rgb(20, 20, 20);
+}
+.form-medidas{
+    padding: 0px 40px 70px 25%;
 }
 .form-home{
     padding: 40px 100px 200px 80px;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    color:rgb(20, 20, 20);
 }
 .form-probabilidade{
     padding: 40px 100px 100px 25%;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    color:rgb(20, 20, 20);
 }
 .medidas{
     float: center;

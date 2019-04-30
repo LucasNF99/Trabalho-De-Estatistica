@@ -5,6 +5,7 @@ function entrada(){
     var q = Number(document.getElementById("valorQ").value);
     var dp = 0;
     var media = n*p;
-    document.getElementById("saida1").innerHTML = "A media é: " + media;
+    dp = Math.sqrt(n*p*q).toFixed(2);
+    document.getElementById("saida1").innerHTML = "A media é: " + media +"</br>O desvio padrão é: " + dp;
 
 }
