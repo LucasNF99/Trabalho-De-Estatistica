@@ -2,10 +2,9 @@
 <html lang="pt-BR">
 
 <head>
-    <script src="trabalhoEstatistica.js"></script>
-    <script src="distribuicaoUni.js"></script>
+    <script src="validacao.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
+    <title>Login</title>
     <link rel="shotcut icon" href="grafico.png" type="image/x-png">
     <meta charset="utf-8">
     <link rel="stylesheet" href="normalize.css">
@@ -15,19 +14,28 @@
 </head>
 
 <body>
-    <h1 class="titulo"><i class="fas fa-home"></i>Trabalho Estatistica | Home</h1>
     <div id="wrap">
-        <form class="form-home">
-            <a class="btn-link" href="descritiva.html">Estatistica Descritiva</a>
-            <a class="btn-link" href="distribuicaoUni.html">Probabilidade</a>
-            <a class="btn-link" href="#">Corelaçao e Regreçao</a>
+        <h1 class="titulo"><i class="fas fa-chart-bar"></i>Trabalho Estatistica | Login</h1>
+        <header class="cabecalho">
+
+        </header>
+        <form class="login" action="home.html" name="form" onsubmit="return validacao()">
+            <p>
+                <label>Digite seu email:</label><input type="text"  name="email" placeholder="exemplo@gmail.com">
+            </p>
+            <p>
+                <label>Digite sua senha:</label><input type="password"  name="senha">
+            </p>
+            <button class="btn-login" type="submit">Login</button>
+            <a href="home.html" class="link-conv">Entrar como convidado!</a>
         </form>
         <footer class="rodape">
             <p class="copyright">
-                Copyright © Nenhum direito reservado.
+                Copyright © todos direitos reservados.
             </p>
         </footer>
     </div>
+
 </body>
 
 </html>

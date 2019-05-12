@@ -90,6 +90,17 @@ input[type=number]{
     box-shadow: 1px 1px 0px #000000;
     position: relative;
 }
+.link-conv{
+    margin: 0;
+    padding: 0;
+    float: center;
+    text-decoration: none;
+    display: block;
+    color: black;
+}
+.link-conv:hover{
+    text-decoration: underline;
+}
 .btn-login:active{
     top:5px;
     position: relative;
@@ -189,7 +200,7 @@ form{
     margin:auto;
     font-weight: bold;
     display: block;
-    padding: 100px 40px 10% 25%;
+    padding: 100px 40px 20% 25%;
     font-size: 1.2rem;
     line-height: 1.5rem;
     color:rgb(20, 20, 20);
