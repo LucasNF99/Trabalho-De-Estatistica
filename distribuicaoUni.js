@@ -21,7 +21,7 @@ function entrada() {
         inter = vet[1] - vet[0];
     }
     var desuni = 0;
-    desuni = (1/(vmax - vmin))*inter;
+    desuni = ((1/(vmax - vmin))*inter).toFixed(2);
     desuni = (desuni * 100) + "%";
-    document.getElementById("saida1").innerHTML ="A média é: "+ media +"</br> O desvio padrão é: " + dp + "</br> O coeficiente de variação é: " + coef + "</br> A destribuição uniforme é: " + desuni;
+    document.getElementById("saida1").innerHTML ="A média é: "+ media +"</br> O desvio padrão é: " + dp + "</br> O coeficiente de variação é: " + coef + "</br> A probabilidade é de: " + desuni;
 }
