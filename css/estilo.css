@@ -175,7 +175,6 @@ header label:hover{
     padding: 0;
     position: relative;
     overflow: hidden;
-
 }
 .dropdown:hover{
      overflow: visible; 
