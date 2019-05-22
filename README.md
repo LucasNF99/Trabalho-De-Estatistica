@@ -1,3 +1,1 @@
 # Trabalho-De-Estatistica
-
-update
