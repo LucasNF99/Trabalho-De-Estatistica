@@ -295,6 +295,16 @@ button:active{
     position: relative;
     box-shadow: none;
 }
+.dropdownP{
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    overflow: hidden;
+}
+.dropdownP:hover{
+    overflow: visible;
+}
 .titulo{
     float: center;
     background: #e3e3e3;
