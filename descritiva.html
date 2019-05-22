@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 
 <head>
-    <script src="trabalhoEstatistica.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Estatistica-Descritiva</title>
     <link rel="shotcut icon" href="grafico.png" type="image/x-png">
@@ -23,7 +23,7 @@
                 <ul class="priItem">
                     <li><a class="menu-link primeiro" href="home.html"><i class="fas fa-home"></i>Home</a></li>
                     <li><a class="menu-link" href="descritiva.html"> Descritiva</a></li>
-                    <li><a class="menu-link" href="descritiva.html">Correlação e regressão</a></li>
+                    <li><a class="menu-link" href="coRe.html">Correlação e regressão</a></li>
                     <li class="dropdown" ><a class="menu-link" href="#"> Probabilidade</a>
                         <ul class="subItem">
                             <li><a class="subLink" href="distribuicaoUni.html">Distribuição uniforme</a></li>
@@ -62,6 +62,7 @@
                     <p>
                         <label class="label">Informe os dados :</label> <input required="true" type="text" id="variavel"
                             placeholder="ex: 30;40;50;50">
+                            <input type="file" class="upload" id="arquivo">
                     </p>
         </form>
         <form class="form-medidas">
@@ -195,14 +196,18 @@
         <button class="btn-descritiva" type="submit" onclick="entrada()">Calcular</button>
         <p id="saida1" class="scroll"></p>
         <div id="resultados">
-            <p id="saida2"></p>
+            <p id="saida2"></p>            
         </div>
+        <div class="container">
+             <canvas id="grafico"></canvas>
+         </div>
         <footer class="rodape">
             <p class="copyright">
                 Copyright © Todos os direitos reservados.
             </p>
         </footer>
     </div>
+    <script src="trabalhoEstatistica.js"></script>
 </body>
 
 </html>

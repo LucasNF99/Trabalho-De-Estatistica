@@ -2,7 +2,6 @@
 <html lang="pt-BR">
 
 <head>
-    <script src="distribuicaoBin.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Estatistica-Probabilidade</title>
     <link rel="shotcut icon" href="grafico.png" type="image/x-png">
@@ -15,7 +14,7 @@
 
 <body>
     <div id="wrap">
-        <h1 class="title2"><i class="fas fa-chart-bar"></i>Trabalho Estatistica | Probabilidade</h1>
+        <h1 class="title2"><i class="fas fa-chart-bar"></i>Trabalho Estatistica | Correlação</h1>
         <header class="cabecalho">
             <input type="checkbox" id="btn-menu">
             <label for="btn-menu">&#9776;</label>
@@ -34,26 +33,18 @@
                 </ul>
             </nav>
         </header>
-        <h2>Distribuição binomial</h2>
-        <form class="form-probabilidade">
+        <h2>Correlação e regressão</h2>
+        <form class="form-core">
             <p>
-                <label class="label"> Informe o tamanho da amostra(N): </label> <input type="number" id="valorN"
-                    placeholder="ex:20">
+                <label class="label"> Informe a variavel independente X: </label> <input type="number" id="independente"
+                    placeholder="Valores separados por ;">
             </p>
             <p>
-                <label class="label"> Informe o valor do evento(K): </label> <input type="text" id="valorK"
-                    placeholder="ex: 1;2;3">
-            </p>
-            <p>
-                <label class="label"> Sucesso(P): </label> <input type="number" id="valorP"
-                    placeholder="ex: 0.2">
-            </p>
-            <p>
-                <label class="label"> Fracasso(Q) </label> <input type="number" id="valorQ"
-                    placeholder="ex: 0.9">
+                <label class="label"> Informe a variavel dependente Y: </label> <input type="number" id="dependente"
+                    placeholder="Valores separados por ;">
             </p>
         </form>
-        <button class="btn-probabilidade" type="submit" onclick="entrada()">Calcular</button>
+        <button class="btn-core" type="submit" onclick="entrada()">Calcular</button>
         <div id="resultados2">
             <p id="saida1"></p>
         </div>
@@ -63,7 +54,6 @@
             </p>
         </footer>
     </div>
+    <script src="coRe.js"></script>
 
 </body>
-
-</html>

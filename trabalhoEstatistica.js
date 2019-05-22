@@ -1,4 +1,32 @@
 /*############################## Entrada de Dados ##############################*/
+(function() {
+    const botaoArquivo = document.getElementById("arquivo").addEventListener("change", () => {
+        lerArquivo();
+    })
+
+    function lerArquivo() {
+    if (window.File && window.FileReader && window.FileList && window.Blob) {
+        const file = document.getElementById("arquivo").files[0];
+        const inputFile = document.getElementById("variavel");
+        const regExp = [/.txt$/, /.csv$/];
+        if (regExp[0].test(file.name) || regExp[1].test(file.name)) {
+            const reader = new FileReader();
+            reader.onload = () => {
+                inputFile.value = reader.result;
+            };
+            reader.readAsText(file);
+        }
+        else {
+            alert('Escolha um arquivo no formato .txt ou .csv');
+        }
+    }
+    else {
+        alert('Seu navegador nao suporta essa funcionalidade');
+    }
+    }
+})();
+    var grafnomes = [];
+    var grafdados = [];
 function entrada() {
     var dados = document.getElementById("variavel").value;
     var tipo = document.getElementById("tipoVariavel").value;
@@ -9,13 +37,14 @@ function entrada() {
     var vet = dados.split(";");
     var ordem = ordemVar.split(";");
     var separat = separatriz.split(".");
+    
     if (tipo == "QLordinal") {
         insedireta(vet);
-        QLordinal(vet, nomeVar, ordem, separat);
+        QLordinal(vet, nomeVar, ordem, separat);        
     }
     else if (tipo == "QLnominal") {
         insedireta(vet);
-        QLnominal(vet, nomeVar, separat);
+        QLnominal(vet, nomeVar, separat);        
     }
     else if (tipo == "QNdiscreta") {
         insedireta(vet);
@@ -25,6 +54,7 @@ function entrada() {
         insedireta(vet);
         QNcontinua(vet, nomeVar, tipoPesquisa, separat);
     }
+    grafico();
 }
 /*##############################Qualitativa Ordinal##############################*/
 function QLordinal(vet, nomeVar, ordem, separat) {
@@ -149,6 +179,11 @@ function QLordinal(vet, nomeVar, ordem, separat) {
     percent = Math.round(percent)
     resulmed = QL[percent - 1]
 
+    for (var i = 1 ; i < matriz.length ; i++){
+        grafnomes[i-1] = matriz[i][0];
+        grafdados[i-1] = matriz[i][1];
+   }
+
 
     document.getElementById("saida1").innerHTML = conteudo
     if (vet.length == q.length) {
@@ -270,14 +305,20 @@ function QLnominal(vet, nomeVar, separat) {
    percent = Math.round(percent)
    resulmed = vet[percent - 1]
 
+   for (var i = 1 ; i < matriz.length ; i++){
+     grafnomes[i-1] = matriz[i][0];
+     grafdados[i-1] = matriz[i][1];
+}
+
 
     document.getElementById("saida1").innerHTML = conteudo
     if (vet.length == q.length) {
         document.getElementById("saida2").innerHTML =" <br/> Mediana: " + mediana + "<br/> Não exite moda" +"<br/> A medida separatriz é: " + resulmed ;
     }
     else {
-        document.getElementById("saida2").innerHTML =" <br/> Mediana: " + mediana + "<br/> Moda: " + q +"<br/> A medida separatriz é: " + resulmed ;
+        document.getElementById("saida2").innerHTML =" <br/> Mediana: " + grafnomes + "<br/> Moda: " + q +"<br/> A medida separatriz é: " + resulmed ;
     }
+   
 }
 /*##############################Quantitativa Discreta##############################*/
 function QNdiscreta(vet, nomeVar, tipoPesquisa, separat) {
@@ -423,6 +464,11 @@ function QNdiscreta(vet, nomeVar, tipoPesquisa, separat) {
         conteudo = conteudo + "</tr>";
     }
     conteudo = conteudo + "</table>";
+
+    for (var i = 1 ; i < matriz.length ; i++){
+        grafnomes[i-1] = matriz[i][0];
+        grafdados[i-1] = matriz[i][1];
+   }
 
     document.getElementById("saida1").innerHTML = conteudo;
     if (vet.length == q.length) {
@@ -617,6 +663,11 @@ function QNcontinua(vet, nomeVar, tipoPesquisa, separat) {
     }
     conteudo = conteudo + "</table>";
 
+    for (var i = 1 ; i < matriz.length ; i++){
+        grafnomes[i-1] = matriz[i][1];
+        grafdados[i-1] = matriz[i][2];
+   }
+
     document.getElementById("saida1").innerHTML = conteudo;
 
     document.getElementById("saida2").innerHTML = " A média é: " + media + " <br/> A mediana é: " + mediana + "<br/> A moda é: " + moda + "<br/> O desvio Padrao é: " + desviopadrao + "<br/> O Coeficiente de variação é: " + cv +"<br/> A medida separatriz é: " + resulmed;
@@ -640,4 +691,72 @@ function insedireta(vet) {
         }
         vet[k] = x;
     }
+}
+
+function grafico() {
+     let grafico = document.getElementById('grafico').getContext('2d');
+
+    // Global Options
+    Chart.defaults.global.defaultFontFamily = 'Lato';
+    Chart.defaults.global.defaultFontSize = 18;
+    Chart.defaults.global.defaultFontColor = '#777';
+
+    let massPopChart = new Chart(grafico, {
+      type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea , scatter
+      data:{
+        labels:[] = grafnomes,
+        datasets:[{
+          
+          data:[] = grafdados,
+          columnwidth: 0,
+
+          //backgroundColor:'green',
+          backgroundColor:[
+            'rgba(255, 99, 132, 0.6)',
+            'rgba(54, 162, 235, 0.6)',
+            'rgba(255, 206, 86, 0.6)',
+            'rgba(75, 192, 192, 0.6)',
+            'rgba(153, 102, 255, 0.6)',
+            'rgba(255, 159, 64, 0.6)',
+            'rgba(255, 99, 132, 0.6)'
+          ],
+          borderWidth:1,
+          borderColor:'#777',
+          hoverBorderWidth:3,
+          hoverBorderColor:'#000'
+        }]
+      },
+      options:{
+        title:{
+          display:false,
+          text:'Largest Cities In Massachusetts',
+          fontSize:25
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        },
+        legend:{
+          display:false,
+          position:'right',
+          labels:{
+            fontColor:'#000'
+          }
+        },
+        layout:{
+          padding:{
+            left:50,
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
 }
