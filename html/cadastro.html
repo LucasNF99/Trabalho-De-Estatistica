@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
+    <title>Cadastro</title>
     <link rel="shotcut icon" href="../imagens/grafico.png" type="image/x-png">
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/normalize.css">
@@ -14,20 +14,28 @@
 
 <body>
     <div id="wrap">
-        <h1 class="titulo"><i class="fas fa-chart-bar"></i>Trabalho Estatistica | Login</h1>
+        <h1 class="titulo"><i class="fas fa-chart-bar"></i>Trabalho Estatistica | Cadastro</h1>
         <header class="cabecalho">
 
         </header>
-        <form class="login" action="../html/home.html" name="form" onsubmit="return validacao()">
+        <form class="login" action="../html/login.html" name="form" onsubmit="return validacao()">
+            <p>
+                <label>Digite seu nome:</label><input type="text"  name="name" placeholder="Nome">
+            </p>
             <p>
                 <label>Digite seu email:</label><input type="text"  name="email" placeholder="exemplo@gmail.com">
             </p>
             <p>
+                <label>Confirme seu email:</label><input type="text"  name="email" placeholder="exemplo@gmail.com">
+            </p>
+            <p>
                 <label>Digite sua senha:</label><input type="password"  name="senha">
             </p>
-            <button class="btn-login" type="submit">Login</button>
+            <p>
+                <label>Comfirme sua senha:</label><input type="password"  name="senha">
+            </p>
+            <button class="btn-login" type="submit">Cadastar!</button>
             <a href="../html/home.html" class="link-conv">Entrar como convidado!</a>
-            <a href="../html/cadastro.html" class="link-conv">Cadastrar-se!</a>
         </form>
         <footer class="rodape0">
             <p class="copyright">
