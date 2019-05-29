@@ -78,6 +78,7 @@ input[type=number]{
     float: center;
     cursor: pointer;
     margin: 0 0 0 30%;
+    margin-bottom: 10%;
     border: 1.5px solid;
     border-radius: 5px;
     padding: 15px;
@@ -289,6 +290,10 @@ button:active{
     border-color: rgb(27, 27, 27);
     border-width: 2px;
     width: 35%;
+}
+.container{
+    margin-right: 100px;
+    margin-bottom: 100px;
 }
 .btn-link:active{
     top:5px;

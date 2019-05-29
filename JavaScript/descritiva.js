@@ -27,6 +27,7 @@
 })();
     var grafnomes = [];
     var grafdados = [];
+    var tipografico
 function entrada() {
     var dados = document.getElementById("variavel").value;
     var tipo = document.getElementById("tipoVariavel").value;
@@ -36,23 +37,27 @@ function entrada() {
     var separatriz = document.getElementById("separatriz").value;
     var vet = dados.split(";");
     var ordem = ordemVar.split(";");
-    var separat = separatriz.split(".");
+    var separat = separatriz.split(".");   
     
     if (tipo == "QLordinal") {
         insedireta(vet);
-        QLordinal(vet, nomeVar, ordem, separat);        
+        QLordinal(vet, nomeVar, ordem, separat); 
+        tipografico = "pie";      
     }
     else if (tipo == "QLnominal") {
         insedireta(vet);
-        QLnominal(vet, nomeVar, separat);        
+        QLnominal(vet, nomeVar, separat);   
+        tipografico = "pie";       
     }
     else if (tipo == "QNdiscreta") {
         insedireta(vet);
         QNdiscreta(vet, nomeVar, tipoPesquisa, separat);
+        tipografico = "bar";  
     }
     else if (tipo == "QNcontinua") {
         insedireta(vet);
         QNcontinua(vet, nomeVar, tipoPesquisa, separat);
+        tipografico = "bar";  
     }
     grafico();
 }
@@ -702,7 +707,7 @@ function grafico() {
     Chart.defaults.global.defaultFontColor = '#777';
 
     let massPopChart = new Chart(grafico, {
-      type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea , scatter
+      type: [] = tipografico , // bar, horizontalBar, pie, line, doughnut, radar, polarArea , scatter
       data:{
         labels:[] = grafnomes,
         datasets:[{
