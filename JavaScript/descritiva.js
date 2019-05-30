@@ -6,7 +6,7 @@
 
     function lerArquivo() {
     if (window.File && window.FileReader && window.FileList && window.Blob) {
-        const file = document.getElementById("arquivo").files[0];
+        const file = document.getElementById("arquivo").files[document.getElementById("arquivo").files.length - 1];
         const inputFile = document.getElementById("variavel");
         const regExp = [/.txt$/, /.csv$/];
         if (regExp[0].test(file.name) || regExp[1].test(file.name)) {
@@ -28,7 +28,10 @@
     var grafnomes = [];
     var grafdados = [];
     var tipografico
-function entrada() {
+    var CP = 0;
+    var BP = 0;
+function entrada(evt) {
+    evt.preventDefault();
     var dados = document.getElementById("variavel").value;
     var tipo = document.getElementById("tipoVariavel").value;
     var nomeVar = document.getElementById("nomeVariavel").value;
@@ -52,12 +55,16 @@ function entrada() {
     else if (tipo == "QNdiscreta") {
         insedireta(vet);
         QNdiscreta(vet, nomeVar, tipoPesquisa, separat);
-        tipografico = "bar";  
+        tipografico = "bar"; 
+        CP = 0.8
+        BP = 0.9 
     }
     else if (tipo == "QNcontinua") {
         insedireta(vet);
         QNcontinua(vet, nomeVar, tipoPesquisa, separat);
-        tipografico = "bar";  
+        tipografico = "bar"; 
+        BP = 1;
+        CP = 1;
     }
     grafico();
 }
@@ -738,6 +745,10 @@ function grafico() {
           fontSize:25
         },
         scales: {
+             xAxes: [{
+                categoryPercentage: CP,
+                barPercentage:  BP
+            }],
             yAxes: [{
                 ticks: {
                     beginAtZero: true

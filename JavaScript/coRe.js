@@ -1,3 +1,37 @@
+(function() {
+    const botaoArquivo = document.getElementById("arquivo2").addEventListener("change", () => {
+        lerArquivo();
+    })
+
+    function lerArquivo() {
+    if (window.File && window.FileReader && window.FileList && window.Blob) {
+        const file = document.getElementById("arquivo2").files[document.getElementById("arquivo2").files.length - 1];
+        const inputFile1 = document.getElementById("independente");
+        const inputFile2 = document.getElementById("dependente");
+        const regExp = [/.txt$/, /.csv$/];
+        if (regExp[0].test(file.name) || regExp[1].test(file.name)) {
+            const reader = new FileReader();
+            reader.onload = () => {
+                const data = reader.result.split(/\n/);
+
+                inputFile1.value = data[0];
+                inputFile2.value = data[1];
+            };
+            reader.readAsText(file);
+        }
+        else {
+            alert('Escolha um arquivo no formato .txt ou .csv');
+        }
+    }
+    else {
+        alert('Seu navegador nao suporta essa funcionalidade');
+    }
+    }
+})();
+
+
+
+
     var w
     var z
     var dataS = [];
@@ -6,7 +40,8 @@
     var menorRegr
     var a;
     var b;    
-function entrada(){
+function entrada(evt){
+    evt.preventDefault();
     var valx = document.getElementById("independente").value;
     var valy = document.getElementById("dependente").value;
     w = valx.split(";");

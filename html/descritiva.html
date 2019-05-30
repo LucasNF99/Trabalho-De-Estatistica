@@ -35,165 +35,155 @@
             </nav>
         </header>
         <form>
-            <p>
-                <p class="label"> Selecione o tipo de pesquisa</p>
-                <select id="tipoPesquisa">
-                    <option value="amostra">Amostra</option>
-                    <option value="populacao">População</option>
-                </select>
-                <p>
-                    <p>
-                        <p class="label">Selecione o tipo da variável</p>
-                        <select id="tipoVariavel">
-                            <option value="QLordinal">Qualitativa ordinal</option>
-                            <option value="QLnominal">Qualitativa nominal</option>
-                            <option value="QNdiscreta">Quantitaviva discreta</option>
-                            <option value="QNcontinua">Quantitaviva continua</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label class="label"> Informe a ordem das variaveis: </label> <input type="text"
-                            id="ordemVariavel" placeholder="ex: ótimo;bom;ruim">
-                    </p>
-                    <p>
-                        <label class="label">Digite o nome da variavel:</label> <input type="text" id="nomeVariavel"
-                            placeholder="ex: Nivel de escolaridade">
-                    </p>
-                    <p>
-                        <label class="label">Informe os dados :</label> <input required="true" type="text" id="variavel"
-                            placeholder="ex: 30;40;50;50">
-                            <input type="file" class="upload" id="arquivo">
-                    </p>
+            <p class="label"> Selecione o tipo de pesquisa</p>
+            <select id="tipoPesquisa">
+                <option value="amostra">Amostra</option>
+                <option value="populacao">População</option>
+            </select>
+
+            <p class="label">Selecione o tipo da variável</p>
+            <select id="tipoVariavel">
+                <option value="QLordinal">Qualitativa ordinal</option>
+                <option value="QLnominal">Qualitativa nominal</option>
+                <option value="QNdiscreta">Quantitaviva discreta</option>
+                <option value="QNcontinua">Quantitaviva continua</option>
+            </select>
+
+            <label class="label"> Informe a ordem das variaveis: </label> <input type="text"
+                id="ordemVariavel" placeholder="ex: ótimo;bom;ruim">
+
+            <label class="label">Digite o nome da variavel:</label> <input type="text" id="nomeVariavel"
+                placeholder="ex: Nivel de escolaridade">
+ 
+            <label class="label">Informe os dados :</label> <input required="true" type="text" id="variavel"
+                placeholder="ex: 30;40;50;50">
+
+            <input type="file" class="upload" id="arquivo">
+            <p>Medidas separatrizes:</p>
+
+            <select id="separatriz" class="medidas">
+                <option value="Q.25">Q1</option>
+                <option value="Q.50">Q2</option>
+                <option value="Q.75">Q3</option>
+                <option value="Q.100">Q4</option>
+                <option value="K.20">K1</option>
+                <option value="K.40">K2</option>
+                <option value="K.60">K3</option>
+                <option value="K.80">K4</option>
+                <option value="K.100">K5</option>
+                <option value="D.10">D1</option>
+                <option value="D.20">D2</option>
+                <option value="D.30">D3</option>
+                <option value="D.40">D4</option>
+                <option value="D.50">D5</option>
+                <option value="D.60">D6</option>
+                <option value="D.70">D7</option>
+                <option value="D.80">D8</option>
+                <option value="D.90">D9</option>
+                <option value="D.100">D10</option>
+                <option value="P.1">P1</option>
+                <option value="P.2">P2</option>
+                <option value="P.3">P3</option>
+                <option value="P.4">P4</option>
+                <option value="P.5">P5</option>
+                <option value="P.6">P6</option>
+                <option value="P.7">P7</option>
+                <option value="P.8">P8</option>
+                <option value="P.9">P9</option>
+                <option value="P.10">P10</option>
+                <option value="P.11">P11</option>
+                <option value="P.12">P12</option>
+                <option value="P.13">P13</option>
+                <option value="P.14">P14</option>
+                <option value="P.15">P15</option>
+                <option value="P.16">P16</option>
+                <option value="P.17">P17</option>
+                <option value="P.18">P18</option>
+                <option value="P.19">P19</option>
+                <option value="P.20">P20</option>
+                <option value="P.21">P21</option>
+                <option value="P.22">P22</option>
+                <option value="P.23">P23</option>
+                <option value="P.24">P24</option>
+                <option value="P.25">P25</option>
+                <option value="P.26">P26</option>
+                <option value="P.27">P27</option>
+                <option value="P.28">P28</option>
+                <option value="P.29">P29</option>
+                <option value="P.30">P30</option>
+                <option value="P.31">P31</option>
+                <option value="P.32">P32</option>
+                <option value="P.33">P33</option>
+                <option value="P.34">P34</option>
+                <option value="P.35">P35</option>
+                <option value="P.36">P36</option>
+                <option value="P.37">P37</option>
+                <option value="P.38">P38</option>
+                <option value="P.39">P39</option>
+                <option value="P.40">P40</option>
+                <option value="P.41">P41</option>
+                <option value="P.42">P42</option>
+                <option value="P.43">P43</option>
+                <option value="P.44">P44</option>
+                <option value="P.45">P45</option>
+                <option value="P.46">P46</option>
+                <option value="P.47">P47</option>
+                <option value="P.48">P48</option>
+                <option value="P.49">P49</option>
+                <option value="P.50">P50</option>
+                <option value="P.51">P51</option>
+                <option value="P.52">P52</option>
+                <option value="P.53">P53</option>
+                <option value="P.54">P54</option>
+                <option value="P.55">P55</option>
+                <option value="P.56">P56</option>
+                <option value="P.57">P57</option>
+                <option value="P.58">P58</option>
+                <option value="P.59">P59</option>
+                <option value="P.60">P60</option>
+                <option value="P.61">P61</option>
+                <option value="P.62">P62</option>
+                <option value="P.63">P63</option>
+                <option value="P.64">P64</option>
+                <option value="P.65">P65</option>
+                <option value="P.66">P66</option>
+                <option value="P.67">P67</option>
+                <option value="P.68">P68</option>
+                <option value="P.69">P69</option>
+                <option value="P.70">P70</option>
+                <option value="P.71">P71</option>
+                <option value="P.72">P72</option>
+                <option value="P.73">P73</option>
+                <option value="P.74">P74</option>
+                <option value="P.75">P75</option>
+                <option value="P.76">P76</option>
+                <option value="P.77">P77</option>
+                <option value="P.78">P78</option>
+                <option value="P.79">P79</option>
+                <option value="P.80">P80</option>
+                <option value="P.81">P81</option>
+                <option value="P.82">P82</option>
+                <option value="P.83">P83</option>
+                <option value="P.84">P84</option>
+                <option value="P.85">P85</option>
+                <option value="P.86">P86</option>
+                <option value="P.87">P87</option>
+                <option value="P.88">P88</option>
+                <option value="P.89">P89</option>
+                <option value="P.90">P90</option>
+                <option value="P.91">P91</option>
+                <option value="P.92">P92</option>
+                <option value="P.93">P93</option>
+                <option value="P.94">P94</option>
+                <option value="P.95">P95</option>
+                <option value="P.96">P96</option>
+                <option value="P.97">P97</option>
+                <option value="P.98">P98</option>
+                <option value="P.99">P99</option>
+                <option value="P.100">P100</option>
+            </select>
+            <button class="btn-descritiva" type="submit" onclick="entrada(event)">Calcular</button>
         </form>
-        <form class="form-medidas">
-            <p>
-                Medidas separatrizes:
-            </p>
-            <p>
-                <select id="separatriz" class="medidas">
-                    <option value="Q.25">Q1</option>
-                    <option value="Q.50">Q2</option>
-                    <option value="Q.75">Q3</option>
-                    <option value="Q.100">Q4</option>
-                    <option value="K.20">K1</option>
-                    <option value="K.40">K2</option>
-                    <option value="K.60">K3</option>
-                    <option value="K.80">K4</option>
-                    <option value="K.100">K5</option>
-                    <option value="D.10">D1</option>
-                    <option value="D.20">D2</option>
-                    <option value="D.30">D3</option>
-                    <option value="D.40">D4</option>
-                    <option value="D.50">D5</option>
-                    <option value="D.60">D6</option>
-                    <option value="D.70">D7</option>
-                    <option value="D.80">D8</option>
-                    <option value="D.90">D9</option>
-                    <option value="D.100">D10</option>
-                    <option value="P.1">P1</option>
-                    <option value="P.2">P2</option>
-                    <option value="P.3">P3</option>
-                    <option value="P.4">P4</option>
-                    <option value="P.5">P5</option>
-                    <option value="P.6">P6</option>
-                    <option value="P.7">P7</option>
-                    <option value="P.8">P8</option>
-                    <option value="P.9">P9</option>
-                    <option value="P.10">P10</option>
-                    <option value="P.11">P11</option>
-                    <option value="P.12">P12</option>
-                    <option value="P.13">P13</option>
-                    <option value="P.14">P14</option>
-                    <option value="P.15">P15</option>
-                    <option value="P.16">P16</option>
-                    <option value="P.17">P17</option>
-                    <option value="P.18">P18</option>
-                    <option value="P.19">P19</option>
-                    <option value="P.20">P20</option>
-                    <option value="P.21">P21</option>
-                    <option value="P.22">P22</option>
-                    <option value="P.23">P23</option>
-                    <option value="P.24">P24</option>
-                    <option value="P.25">P25</option>
-                    <option value="P.26">P26</option>
-                    <option value="P.27">P27</option>
-                    <option value="P.28">P28</option>
-                    <option value="P.29">P29</option>
-                    <option value="P.30">P30</option>
-                    <option value="P.31">P31</option>
-                    <option value="P.32">P32</option>
-                    <option value="P.33">P33</option>
-                    <option value="P.34">P34</option>
-                    <option value="P.35">P35</option>
-                    <option value="P.36">P36</option>
-                    <option value="P.37">P37</option>
-                    <option value="P.38">P38</option>
-                    <option value="P.39">P39</option>
-                    <option value="P.40">P40</option>
-                    <option value="P.41">P41</option>
-                    <option value="P.42">P42</option>
-                    <option value="P.43">P43</option>
-                    <option value="P.44">P44</option>
-                    <option value="P.45">P45</option>
-                    <option value="P.46">P46</option>
-                    <option value="P.47">P47</option>
-                    <option value="P.48">P48</option>
-                    <option value="P.49">P49</option>
-                    <option value="P.50">P50</option>
-                    <option value="P.51">P51</option>
-                    <option value="P.52">P52</option>
-                    <option value="P.53">P53</option>
-                    <option value="P.54">P54</option>
-                    <option value="P.55">P55</option>
-                    <option value="P.56">P56</option>
-                    <option value="P.57">P57</option>
-                    <option value="P.58">P58</option>
-                    <option value="P.59">P59</option>
-                    <option value="P.60">P60</option>
-                    <option value="P.61">P61</option>
-                    <option value="P.62">P62</option>
-                    <option value="P.63">P63</option>
-                    <option value="P.64">P64</option>
-                    <option value="P.65">P65</option>
-                    <option value="P.66">P66</option>
-                    <option value="P.67">P67</option>
-                    <option value="P.68">P68</option>
-                    <option value="P.69">P69</option>
-                    <option value="P.70">P70</option>
-                    <option value="P.71">P71</option>
-                    <option value="P.72">P72</option>
-                    <option value="P.73">P73</option>
-                    <option value="P.74">P74</option>
-                    <option value="P.75">P75</option>
-                    <option value="P.76">P76</option>
-                    <option value="P.77">P77</option>
-                    <option value="P.78">P78</option>
-                    <option value="P.79">P79</option>
-                    <option value="P.80">P80</option>
-                    <option value="P.81">P81</option>
-                    <option value="P.82">P82</option>
-                    <option value="P.83">P83</option>
-                    <option value="P.84">P84</option>
-                    <option value="P.85">P85</option>
-                    <option value="P.86">P86</option>
-                    <option value="P.87">P87</option>
-                    <option value="P.88">P88</option>
-                    <option value="P.89">P89</option>
-                    <option value="P.90">P90</option>
-                    <option value="P.91">P91</option>
-                    <option value="P.92">P92</option>
-                    <option value="P.93">P93</option>
-                    <option value="P.94">P94</option>
-                    <option value="P.95">P95</option>
-                    <option value="P.96">P96</option>
-                    <option value="P.97">P97</option>
-                    <option value="P.98">P98</option>
-                    <option value="P.99">P99</option>
-                    <option value="P.100">P100</option>
-                </select>
-            </p>
-        </form>
-        <button class="btn-descritiva" type="submit" onclick="entrada()">Calcular</button>
         <p id="saida1" class="scroll"></p>
         <div id="resultados">
             <p id="saida2"></p>            

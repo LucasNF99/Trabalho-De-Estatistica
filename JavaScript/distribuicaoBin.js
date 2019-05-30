@@ -1,4 +1,5 @@
-function entrada(){
+function entrada(evt){
+    evt.preventDefault();
     var n = Number(document.querySelector("input#valorN").value);
     var k = document.querySelector("input#valorK").value;
     var p = Number(document.querySelector("input#valorP").value);

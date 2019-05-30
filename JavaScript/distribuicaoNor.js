@@ -83,7 +83,8 @@
     tabela[39].push([0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000]);
     tabela[39] = tabela[39][0].splice(",");    
 
-function entrada() {
+function entrada(evt) {
+    evt.preventDefault();
     var ter1 = 0
     var teste1 = 0
     var ter2 = 0

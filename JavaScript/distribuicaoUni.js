@@ -1,4 +1,5 @@
-function entrada() {
+function entrada(evt) {
+    evt.preventDefault();
     var vmax = Number(document.getElementById("vMax").value);
     var vmin = Number(document.getElementById("vMin").value);
     var intervalo = document.getElementById("interv").value
