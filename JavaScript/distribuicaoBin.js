@@ -51,3 +51,18 @@ function fatorial(n){
     }
     return result;          
 }
+function validacao2(){
+    if((document.form.valorN.value == "")||(document.form.valorK.value == "")||(document.form.valorP.value == "")||(document.form.valorQ.value == "")){
+        alert("Por favor preecha todos os campos!");
+        return false; 
+    }
+    return true;
+}
+
+function start(evt) {
+    let validation = validacao2();
+
+    if(validation) {
+        entrada(evt);
+    }
+}

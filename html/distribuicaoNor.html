@@ -34,14 +34,14 @@
             </nav>
         </header>
         <h2>Distribuição normal</h2>
-        <form class="form-probabilidade">
+        <form class="form-probabilidade"  name="form">
             <p>
                 <label class="label"> Informe a média: </label> <input type="number" id="med"
-                    placeholder="ex: 6.2">
+                    placeholder="ex: 6.2" name="med" required>
             </p>
             <p>
                 <label class="label"> Informe o desvio padrão: </label> <input type="number" id="dp"
-                    placeholder="ex: 5.6">
+                    placeholder="ex: 5.6" name="dp" required>
             </p>
             <p class="label"> Informe o intervalo da analise:
                 <select id="interv" class="intervalos">
@@ -53,9 +53,9 @@
             <p class="explica">Caso escolha a opção Entre, digite os numeros separados por ;</P>
             <p>
                 <label class="label"> Informe os dados: </label> <input type="text" id="intDados"
-                    placeholder="ex: 20;50">
+                    placeholder="ex: 20;50" name="intDados" required>
             </p>
-            <button class="btn-probabilidade" type="submit" onclick="entrada(event)">Calcular</button>
+            <button class="btn-probabilidade" type="submit" onclick="start(event)">Calcular</button>
         </form>
         <div id="resultados2">
             <p id="saida1"></p>

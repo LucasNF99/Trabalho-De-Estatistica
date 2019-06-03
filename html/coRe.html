@@ -35,22 +35,22 @@
             </nav>
         </header>
         <h2>Correlação e regressão</h2>
-        <form class="form-core">
+        <form class="form-core"  name="form" action="">
             <p>
                 <label class="label"> Informe a variavel independente X: </label> <input type="text" id="independente"
-                    placeholder="Valores separados por ;">
+                    placeholder="Valores separados por ;" name="independente">
             </p>
             <p>
                 <label class="label"> Informe a variavel dependente Y: </label> <input type="text" id="dependente"
-                    placeholder="Valores separados por ;">
+                    placeholder="Valores separados por ;" name = "dependente">
             </p>
             <input type="file" id="arquivo2">
-            <button class="btn-core" type="submit" onclick="entrada(event)">Calcular</button>
+            <button class="btn-core" type="submit" onclick="start(event)">Calcular</button>
         </form>
         <div id="resultados2">
             <p id="saida1"></p>
         </div>
-        <div class="container">
+        <div class="Tgrafico">
              <canvas id="grafico"></canvas>
          </div>
         <footer class="rodape">

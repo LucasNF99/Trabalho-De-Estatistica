@@ -34,7 +34,7 @@
                 </ul>
             </nav>
         </header>
-        <form>
+        <form  name="form" action="">
             <p class="label"> Selecione o tipo de pesquisa</p>
             <select id="tipoPesquisa">
                 <option value="amostra">Amostra</option>
@@ -43,8 +43,8 @@
 
             <p class="label">Selecione o tipo da variável</p>
             <select id="tipoVariavel">
-                <option value="QLordinal">Qualitativa ordinal</option>
                 <option value="QLnominal">Qualitativa nominal</option>
+                <option value="QLordinal">Qualitativa ordinal</option>
                 <option value="QNdiscreta">Quantitaviva discreta</option>
                 <option value="QNcontinua">Quantitaviva continua</option>
             </select>
@@ -53,10 +53,10 @@
                 id="ordemVariavel" placeholder="ex: ótimo;bom;ruim">
 
             <label class="label">Digite o nome da variavel:</label> <input type="text" id="nomeVariavel"
-                placeholder="ex: Nivel de escolaridade">
+                placeholder="ex: Nivel de escolaridade" name="nomeVar">
  
             <label class="label">Informe os dados :</label> <input required="true" type="text" id="variavel"
-                placeholder="ex: 30;40;50;50">
+                placeholder="ex: 30;40;50;50" name="variavel">
 
             <input type="file" class="upload" id="arquivo">
             <p>Medidas separatrizes:</p>
@@ -182,13 +182,13 @@
                 <option value="P.99">P99</option>
                 <option value="P.100">P100</option>
             </select>
-            <button class="btn-descritiva" type="submit" onclick="entrada(event)">Calcular</button>
+            <button class="btn-descritiva" type="submit" onclick="start(event)">Calcular</button>
         </form>
         <p id="saida1" class="scroll"></p>
         <div id="resultados">
             <p id="saida2"></p>            
         </div>
-        <div class="container">
+        <div class="Tgrafico">
              <canvas id="grafico"></canvas>
          </div>
         <footer class="rodape">

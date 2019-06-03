@@ -218,4 +218,18 @@ function entrada(evt) {
     }
     
 
+function validacao2(){
+    if((document.form.med.value == "")||(document.form.dp.value == "")||(document.form.intDados.value == "")){
+        alert("Por favor preecha todos os campos!");
+        return false; 
+    }
+    return true;
+}
 
+function start(evt) {
+    let validation = validacao2();
+
+    if(validation) {
+        entrada(evt);
+    }
+}

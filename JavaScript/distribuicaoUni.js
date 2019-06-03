@@ -26,3 +26,20 @@ function entrada(evt) {
     desuni = (desuni * 100) + "%";
     document.getElementById("saida1").innerHTML ="A média é: "+ media +"</br> O desvio padrão é: " + dp + "</br> O coeficiente de variação é: " + coef + "</br> A probabilidade é de: " + desuni;
 }
+
+function validacao2(){
+    if((document.formA.valorMax.value == "")||(document.formA.valorMin.value == "")||(document.formA.dados.value == "")){
+        alert("Por favor preecha todos os campos!");
+        return false; 
+    }
+
+    return true;
+}
+
+function start(evt) {
+    let validation = validacao2();
+
+    if(validation) {
+        entrada(evt);
+    }
+}

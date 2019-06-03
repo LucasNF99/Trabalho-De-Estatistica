@@ -34,24 +34,24 @@
             </nav>
         </header>
         <h2>Distribuição binomial</h2>
-        <form class="form-probabilidade">
+        <form class="form-probabilidade"  name="form" action="">
             <p>
                 <label class="label"> Informe o tamanho da amostra(N): </label> <input type="number" id="valorN"
-                    placeholder="ex:20">
+                    placeholder="ex:20" name="valorN">
             </p>
             <p>
                 <label class="label"> Informe o valor do evento(K): </label> <input type="text" id="valorK"
-                    placeholder="ex: 1;2;3">
+                    placeholder="ex: 1;2;3" name="valorK">
             </p>
             <p>
                 <label class="label"> Sucesso(P): </label> <input type="number" id="valorP"
-                    placeholder="ex: 0.2">
+                    placeholder="ex: 0.2" name="valorP">
             </p>
             <p>
                 <label class="label"> Fracasso(Q) </label> <input type="number" id="valorQ"
-                    placeholder="ex: 0.9">
+                    placeholder="ex: 0.9" name="valorQ">
             </p>
-            <button class="btn-probabilidade" type="submit" onclick="entrada(event)">Calcular</button>
+            <button class="btn-probabilidade" type="submit" onclick="start(event)">Calcular</button>
         </form>
         <div id="resultados2">
             <p id="saida1"></p>

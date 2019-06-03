@@ -34,14 +34,14 @@
             </nav>
         </header>
         <h2>Distribuição uniforme</h2>
-        <form class="form-probabilidade">
+        <form class="form-probabilidade" name="formA" action="">
             <p>
                 <label class="label"> Informe o valor maximo: </label> <input type="number" id="vMax"
-                    placeholder="ex: 100">
+                    name = "valorMax" placeholder="ex: 100" required="true">
             </p>
             <p>
                 <label class="label"> Informe o valor minimo: </label> <input type="number" id="vMin"
-                    placeholder="ex: 50">
+                    name = "valorMin" placeholder="ex: 50" required="true">
             </p>
             <p class="label"> Informe o intervalo da analise:
                 <select id="interv" class="intervalos">
@@ -49,13 +49,13 @@
                     <option value="entre"> Entre </option>
                     <option value="maiorQ"> Maior que </option>
                 </select>
-            </p>
+            </p> 
             <p class="explica">Caso escolha a opção Entre, digite os numeros separados por ;</P>
             <p>
                 <label class="label"> Informe os dados: </label> <input type="text" id="intDados"
-                    placeholder="ex: 70;90">
+                    placeholder="ex: 70;90" name="dados" required="true">
             </p>
-            <button class="btn-probabilidade" type="submit" onclick="entrada(event)">Calcular</button>
+            <button class="btn-probabilidade" type="submit" onclick="start(event)">Calcular</button>
         </form>
         <div id="resultados2">
             <p id="saida1"></p>

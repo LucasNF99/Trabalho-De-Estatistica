@@ -140,3 +140,19 @@ function grafico() {
       }
     );
 }
+function validacao2(){
+    if((document.form.independente.value == "")||(document.form.dependente.value == "")){
+        alert("Por favor preecha todos os campos!");
+        return false; 
+    }
+
+    return true;
+}
+
+function start(evt) {
+    let validation = validacao2();
+
+    if(validation) {
+        entrada(evt);
+    }
+}
