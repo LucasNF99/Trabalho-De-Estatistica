@@ -44,6 +44,8 @@ function entrada(evt){
     evt.preventDefault();
     var valx = document.getElementById("independente").value;
     var valy = document.getElementById("dependente").value;
+    var nInde = document.getElementById("nInde").value;
+    var nDepe = document.getElementById("nDepe").value;
     w = valx.split(";");
     z = valy.split(";");
     var somx = 0;
