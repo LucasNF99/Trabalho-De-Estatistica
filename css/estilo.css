@@ -384,6 +384,12 @@ table {
     font-size: 20px;
     text-align: center;
 }
+.independente,input[type=number]{
+    width: 35px;
+}
+.lcore{
+    font-size: 15px;
+}
 /*Small devices - Smartphones*/
 @media screen and (max-width: 768px){
     h1{
@@ -449,6 +455,19 @@ table {
     }
 
     .btn-descritiva {
-        width: auto; 
+        width: auto;
+        font-size: 10px
+    }
+    .btn-probabilidade{
+        width: auto;
+        font-size: 10px
+    }
+    .btn-core{
+        width: auto;
+        font-size: 10px
+    }
+    .btn-login{
+        width: auto;
+        font-size: 10px
     }
 }
