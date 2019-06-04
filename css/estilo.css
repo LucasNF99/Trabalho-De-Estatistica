@@ -214,9 +214,22 @@ header label:hover{
     display: block;
     margin: 0px 10px;
 }
+.menu .menu-link-s{
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    margin: 0px 0px 0px 400px;
+}
 .menu-link:hover{
     background-color: #cac9c9;
     color: #495868;
+    text-decoration: underline;
+}
+.menu .menu-link-s:hover{
+    background-color: #cac9c9;
+    color: #495868;
+    text-decoration: underline;
 }
 form{
     margin:auto;
