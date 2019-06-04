@@ -5,6 +5,6 @@ feito pelos seguintes alunos:
   <h3>Lucas Natalicio Ferreira</h3>
 <h1>JavaScript</h1>
   <h3>Bruno Tarantelli ,
-  Clayton Lopes e Murilo Lopes</h3>
+  Clayton Lopes , Cleber e Murilo Lopes</h3>
  <h1>Documentação</h1>
   <h3>Gabriel Garcia</h3>
