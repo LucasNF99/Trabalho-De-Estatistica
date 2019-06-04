@@ -139,6 +139,7 @@ input[type=number]{
     padding: 22px 10px 22px 30%;
     display: flex;
     background-color: #efefef;
+    text-shadow: 0px 0px 100px black;
 }
 h1{
     text-align: center;
@@ -234,8 +235,8 @@ form{
     margin: 0% 0 0% 0%;
 }
 .Tgrafico{
-    width: 75%;
-    margin-left: 10%;
+    width: 60%;
+    margin-left: 20%;
     margin-bottom: 100px;
 }
 .btn-core{
@@ -325,6 +326,7 @@ button:active{
     border-right: none;
     border-width: 1.5px;
     padding:20px;
+    box-shadow: 0px 1px 10px black;
 }
 .fas .fa-chart-bar{
     margin: 3px;
