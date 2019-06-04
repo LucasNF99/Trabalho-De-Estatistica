@@ -4,7 +4,7 @@
 <head>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Estatistica-Probabilidade</title>
+    <title>Estatística-Probabilidade</title>
     <link rel="shotcut icon" href="../imagens/grafico.png" type="image/x-png">
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/normalize.css">
@@ -15,7 +15,7 @@
 
 <body>
     <div id="wrap">
-        <h1 class="title2"><i class="fas fa-chart-bar"></i>Trabalho Estatistica | Correlação</h1>
+        <h1 class="title2"><i class="fas fa-chart-bar"></i>Trabalho Estatística | Correlação</h1>
         <header class="cabecalho">
             <input type="checkbox" id="btn-menu">
             <label for="btn-menu">&#9776;</label>
@@ -37,19 +37,21 @@
         <h2>Correlação e regressão</h2>
         <form class="form-core"  name="form" action="">
             <p>
-                <label class="label"> Informe a variavel independente X: </label> <input type="text" id="independente"
+                <label class="label"> Informe a variável independente X: </label> <input type="text" id="independente"
                     placeholder="Valores separados por ;" name="independente">
             </p>
             <p>
-                <label class="label"> Informe a variavel dependente Y: </label> <input type="text" id="dependente"
+                <label class="label"> Informe a variável dependente Y: </label> <input type="text" id="dependente"
                     placeholder="Valores separados por ;" name = "dependente">
             </p>
             <input type="file" id="arquivo2">
             <button class="btn-core" type="submit" onclick="start(event)">Calcular</button>
-
-            <label class="lcore">Digite a independente<input id="nInde" class="independente" type="number"></label> e
-            <label class="lcore">Digite a dependente<input id = "nDepe" class="dependente" type="number"></label> =
-            <button class="minbtn" type="submit" onclick="">Calcular</button>
+            <div class="projecao">
+                <h3>Calcule a projeção Futura</h3>
+                <label class="lcore">X:<input id="nInde" class="independente" type="number"></label> 
+                <label class="lcore">Y:<input id = "nDepe" class="dependente" type="number"></label> 
+                <button class="minbtn" type="submit" onclick="start(event)">Calcular</button>
+            </div>
         </form>
         <div id="resultados2">
             <p id="saida1"></p>

@@ -384,16 +384,17 @@ table {
     font-size: 20px;
     text-align: center;
 }
-.independente,input[type=number]{
-    width: 35px;
-}
 .lcore{
     font-size: 15px;
 }
 .minbtn{
-    display: block;
     width: 75px;
     font-size: 15px;
+    display: block;
+    margin-top: 5px;
+}
+div .projecao{
+    display: none;
 }
 /*Small devices - Smartphones*/
 @media screen and (max-width: 768px){
