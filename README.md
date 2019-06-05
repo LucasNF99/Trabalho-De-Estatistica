@@ -7,4 +7,4 @@ feito pelos seguintes alunos:</h4>
   <h3>Bruno Tarantelli ,
   Clayton Lopes , Cleber e Murilo Lopes</h3>
  <h1>Documentação</h1>
-  <h3>Gabriel Garcia</h3>
+  <h3>Bruno Tarantelli, Gabriel Garcia</h3>
