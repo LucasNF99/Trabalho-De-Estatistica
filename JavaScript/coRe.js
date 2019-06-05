@@ -46,11 +46,11 @@ function entrada(evt){
     var valy = document.getElementById("dependente").value;
     var divP = document.querySelector("div.projecao");
 
-    valx = valx.replace(/,/, '.');
-    valy = valy.replace(/,/, '.');
+    valx = valx.replace(/,/g, '.');
+    valy = valy.replace(/,/g, '.');
     console.log(valx, valy);
     
-    divP.style.display = "block";
+    divP.style.display = "inline-block";
 
     w = valx.split(";");
     z = valy.split(";");
@@ -95,8 +95,11 @@ function entrada(evt){
         if (menorRegr > z[i]) {
             menorRegr = z[i];
         }
-    }        
-    document.getElementById("saida1").innerHTML= R;
+    }  
+
+    document.getElementById("saidaA").innerHTML= a;
+    document.getElementById("saidaB").innerHTML= b;
+    document.getElementById("saida1").innerHTML="A probabilidade é de: " + R + "%";
     grafico();
 }
 function grafico() {
@@ -163,4 +166,28 @@ function start(evt) {
     if(validation) {
         entrada(evt);
     }
+}
+
+function futura(evt){
+    evt.preventDefault();
+    var txtyf = document.getElementById("nDepe");
+    var txtxf = document.getElementById("nInde");
+    var yf = Number(txtyf.value);
+    var xf = Number(txtxf.value);
+
+
+    var final = 0;
+    if((txtyf.value == "") && (txtxf.value != "")){
+        final = Number(a) * xf + Number(b)
+        txtyf.value = final.toFixed(2);
+    }
+    else if ((txtxf.value == "") && (txtyf.value != "")){
+        final = (yf - Number(b)) / Number(a);
+        txtxf.value = final.toFixed(2);
+    }
+    else if((txtxf.value != "" && txtyf.value != "") || (txtxf.value == "" && txtyf.value == "" )) {
+        alert("Dados invalidos")
+    }
+
+
 }

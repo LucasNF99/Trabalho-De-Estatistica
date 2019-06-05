@@ -49,9 +49,11 @@
             <button class="btn-core" type="submit" onclick="start(event)">Calcular</button>
             <div class="projecao">
                 <h3>Calcule a projeção Futura</h3>
-                <label class="lcore">X:<input id="nInde" class="independente" type="number"></label> 
-                <label class="lcore">Y:<input id = "nDepe" class="dependente" type="number"></label> 
-                <button class="minbtn" type="submit" onclick="start(event)">Calcular</button>
+                <form>
+                    <label class="lcore"><input id = "nDepe" class="inp" type="number" placeholder="Y"></label> = <span id="saidaA"></span> * 
+                    <label class="lcore"><input id="nInde" class="inp" type="number" placeholder="X"></label> + <span id="saidaB"></span>
+                    <button type="submit" onclick="futura(event)">Calcular</button>
+                </form>
             </div>
         </form>
         <div id="resultados2">

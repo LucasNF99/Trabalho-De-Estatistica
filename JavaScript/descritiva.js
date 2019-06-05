@@ -508,15 +508,25 @@ function QNcontinua(vet, nomeVar, tipoPesquisa, separat) {
 
     var classes;
     var amplia;
-    var interv;
+    var interv = 0;
+    var auxi = 2;
     classes = (Math.floor(Math.sqrt(vet.length)));
     amplia = vet[vet.length - 1] - vet[0];
-    for (var j = 0; j < 5; j++) {
-        if (((amplia + j) % (classes)) == 0) {
-            interv = (((amplia + j) / (classes)));
-            break
+
+    for (var i = 1; i < 4;i++){
+        for(var j = 0 ; j < 3 ; j++){
+            if (((amplia + i)%((classes-1)+j)) == 0){
+                interv = ((amplia + i)/((classes-1)+j))
+                classes = ((classes-1)+j)
+                auxi = 1;
+                break;                
+            }
+        }
+        if (auxi == 1){
+            break;
         }
     }
+
     for (var i = 0; i < classes; i++) {
         matriz[i + 1] = [];
         matriz[i + 1][0] = i + 1;
@@ -622,10 +632,10 @@ function QNcontinua(vet, nomeVar, tipoPesquisa, separat) {
     }
     percent = (separa * vet.length)/100 
     percent = Math.round(percent)
-    var infer = 0
-    var aux1 = 1
-    var fc2
-    var fclas
+    var infer = 0;
+    var aux1 = 1;
+    var fc2 
+    var fclas 
     for (var i = 1 ; i < matriz.length ; i++){
         if ((percent <= matriz[i][4])&&(percent >= aux1)){
             infer = matriz[i][1] - interv;
@@ -682,7 +692,7 @@ function QNcontinua(vet, nomeVar, tipoPesquisa, separat) {
 
     document.getElementById("saida1").innerHTML = conteudo;
 
-    document.getElementById("saida2").innerHTML = " A média é: " + media + " <br/> A mediana é: " + mediana + "<br/> A moda é: " + moda + "<br/> O desvio Padrao é: " + desviopadrao + "<br/> O Coeficiente de variação é: " + cv +"<br/> A medida separatriz é: " + resulmed;
+    document.getElementById("saida2").innerHTML = " A média é: " + media  + " <br/> A mediana é: " + mediana + "<br/> A moda é: " + moda + "<br/> O desvio Padrão é: " + desviopadrao + "<br/> O Coeficiente de variação é: " + cv +"<br/> A medida separatriz é: " + resulmed;
 
 
 }
@@ -730,7 +740,12 @@ function grafico() {
             'rgba(75, 192, 192, 0.6)',
             'rgba(153, 102, 255, 0.6)',
             'rgba(255, 159, 64, 0.6)',
-            'rgba(255, 99, 132, 0.6)'
+            'rgba(41, 219, 145, 0.6)',
+            'rgba(41, 98, 219, 0.6)',
+            'rgba(249, 11, 11, 0.6)',
+            'rgba(50, 230, 0, 0.6)',
+            'rgba(107, 230, 0, 0.6)',
+            'rgba(42, 0, 255, 0.6)',
           ],
           borderWidth:1,
           borderColor:'#777',
@@ -741,8 +756,6 @@ function grafico() {
       options:{
         title:{
           display:false,
-          text:'Largest Cities In Massachusetts',
-          fontSize:25
         },
         scales: {
              xAxes: [{
