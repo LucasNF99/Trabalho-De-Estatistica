@@ -4,6 +4,8 @@ function entrada(evt){
     var k = document.querySelector("input#valorK").value;
     var p = Number(document.querySelector("input#valorP").value);
     var q = Number(document.querySelector("input#valorQ").value);
+    var resultados = document.getElementById("resultados");
+    resultados.style.display = "block";
 
     var mediaF = mediaA(n,p);
     var desvioP = deviopadrao(n,p,q);

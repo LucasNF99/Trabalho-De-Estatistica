@@ -97,6 +97,8 @@ function entrada(evt) {
     var intervalos = document.getElementById("interv").value;
     var dados = document.getElementById("intDados").value;
     var tatos = dados.split(";");
+    var resultados = document.getElementById("resultados");
+    resultados.style.display = "block";
        
     if(intervalos == "entre"){
         var Z1 = (tatos[0] - media) / dp;

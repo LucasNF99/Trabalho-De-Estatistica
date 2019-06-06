@@ -5,6 +5,8 @@ function entrada(evt) {
     var intervalo = document.getElementById("interv").value
     var dados = document.getElementById("intDados").value;
     var vet = dados.split(";");  
+    var resultados = document.getElementById("resultados");
+    resultados.style.display = "block";
 
     var media = 0;
     media = ((vmax + vmin) / 2);   

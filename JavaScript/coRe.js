@@ -45,6 +45,8 @@ function entrada(evt){
     var valx = document.getElementById("independente").value;
     var valy = document.getElementById("dependente").value;
     var divP = document.querySelector("div.projecao");
+    var resultados = document.getElementById("resultados");
+    resultados.style.display = "block";
 
     valx = valx.replace(/,/g, '.');
     valy = valy.replace(/,/g, '.');

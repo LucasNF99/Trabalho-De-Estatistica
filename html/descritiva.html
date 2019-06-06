@@ -36,30 +36,38 @@
             </nav>
         </header>
         <form  name="form" action="">
-            <p class="label"> Selecione o tipo de pesquisa</p>
-            <select id="tipoPesquisa">
-                <option value="amostra">Amostra</option>
-                <option value="populacao">População</option>
-            </select>
+            <p>
+                <label class="label"> Selecione o tipo de pesquisa</label>
+                <select id="tipoPesquisa">
+                    <option value="amostra">Amostra</option>
+                    <option value="populacao">População</option>
+                </select>
+            </p>
+            <p>
+                <label class="label">Selecione o tipo da variável</label>
+                <select id="tipoVariavel">
+                    <option value="QLnominal">Qualitativa nominal</option>
+                    <option value="QLordinal">Qualitativa ordinal</option>
+                    <option value="QNdiscreta">Quantitaviva discreta</option>
+                    <option value="QNcontinua">Quantitaviva continua</option>
+                </select>
+            </p>
 
-            <p class="label">Selecione o tipo da variável</p>
-            <select id="tipoVariavel">
-                <option value="QLnominal">Qualitativa nominal</option>
-                <option value="QLordinal">Qualitativa ordinal</option>
-                <option value="QNdiscreta">Quantitaviva discreta</option>
-                <option value="QNcontinua">Quantitaviva continua</option>
-            </select>
-
-            <label class="label"> Informe a ordem das variáveis: </label> <input type="text"
-                id="ordemVariavel" placeholder="ex: ótimo;bom;ruim">
-
-            <label class="label">Digite o nome da variável:</label> <input type="text" id="nomeVariavel"
-                placeholder="ex: Nivel de escolaridade" name="nomeVar">
- 
-            <label class="label">Informe os dados :</label> <input required="true" type="text" id="variavel"
-                placeholder="ex: 30;40;50;50" name="variavel">
-
-            <input type="file" class="upload" id="arquivo">
+            <p>
+                <label class="label"> Informe a ordem das variáveis: </label> <input type="text"
+                    id="ordemVariavel" placeholder="ex: ótimo;bom;ruim">
+            </p>
+            <p>
+                <label class="label">Digite o nome da variável:</label> <input type="text" id="nomeVariavel"
+                    placeholder="ex: Nivel de escolaridade" name="nomeVar">
+            </p>
+            <p>
+                <label class="label">Informe os dados :</label> <input required="true" type="text" id="variavel"
+                    placeholder="ex: 30;40;50;50" name="variavel">
+                <p>
+                    <input type="file" class="upload" id="arquivo">
+                </p>
+            </p>
             <p>Medidas separatrizes:</p>
 
             <select id="separatriz" class="medidas">
@@ -187,7 +195,8 @@
         </form>
         <p id="saida1" class="scroll"></p>
         <div id="resultados">
-            <p id="saida2"></p>            
+            <p>Resultados</p>
+            <h5 id="saida2"></h5>            
         </div>
         <div class="Tgrafico">
              <canvas id="grafico"></canvas>

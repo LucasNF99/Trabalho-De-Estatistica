@@ -40,7 +40,9 @@ function entrada(evt) {
     var separatriz = document.getElementById("separatriz").value;
     var vet = dados.split(";");
     var ordem = ordemVar.split(";");
-    var separat = separatriz.split(".");   
+    var separat = separatriz.split(".");
+    var resultados = document.getElementById("resultados");
+    resultados.style.display = "block";  
     
     if (tipo == "QLordinal") {
         insedireta(vet);
@@ -691,9 +693,7 @@ function QNcontinua(vet, nomeVar, tipoPesquisa, separat) {
    }
 
     document.getElementById("saida1").innerHTML = conteudo;
-
     document.getElementById("saida2").innerHTML = " A média é: " + media  + " <br/> A mediana é: " + mediana + "<br/> A moda é: " + moda + "<br/> O desvio Padrão é: " + desviopadrao + "<br/> O Coeficiente de variação é: " + cv +"<br/> A medida separatriz é: " + resulmed;
-
 
 }
 /*############################## Organiza o Vetor##############################*/
