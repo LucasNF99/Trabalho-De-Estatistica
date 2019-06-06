@@ -515,5 +515,6 @@ div .projecao{
     }
     .menu-link-s{
         display: none;
+        visibility: hidden;
     }
 }
