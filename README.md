@@ -1,4 +1,4 @@
-# Trabalho de estatistica
+<h1>Trabalho de estatistica</h1>
 <h4>Este é um projeto interdiciplinar do 3° semestre organizado pela Faculdade de tecnologia de Franca-Fatec
 feito pelos seguintes alunos:</h4>
  <h1>Documentação</h1>
