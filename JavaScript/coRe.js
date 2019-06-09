@@ -187,9 +187,10 @@ function futura(evt){
         final = (yf - Number(b)) / Number(a);
         txtxf.value = final.toFixed(2);
     }
-    else if((txtxf.value != "" && txtyf.value != "") || (txtxf.value == "" && txtyf.value == "" )) {
-        alert("Dados invalidos")
+    else if((txtxf.value != "" && txtyf.value != "")){
+        alert("Por favor preencha apenas um dos dados")
     }
-
-
+    else if ((txtxf.value == "") && (txtyf.value == "" )){
+        alert("Por favor preencha um dos dados")
+    }
 }

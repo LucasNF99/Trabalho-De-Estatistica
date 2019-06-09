@@ -639,7 +639,7 @@ function QNcontinua(vet, nomeVar, tipoPesquisa, separat) {
     var fc2 
     var fclas 
     for (var i = 1 ; i < matriz.length ; i++){
-        if ((percent <= matriz[i][4])&&(percent >= aux1)){
+        if ((percent <= matriz[i][4])&&(percent > aux1)){
             infer = matriz[i][1] - interv;
             if (matriz[i-1][4] == " Fac "){
                 fc2 = 0 ;
@@ -648,9 +648,8 @@ function QNcontinua(vet, nomeVar, tipoPesquisa, separat) {
                 fc2 = matriz[i-1][4];
             }
             fclas = matriz[i][2];
-        }        
-        
-        aux1 = aux1 + matriz[i][4];
+        }         
+        aux1 = matriz[i][4] ;
     } 
     var resulmed = infer + ((percent - fc2)/fclas)*interv
     resulmed = resulmed.toFixed(2);
