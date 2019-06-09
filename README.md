@@ -7,5 +7,5 @@ feito pelos seguintes alunos:</h4>
   <h3> Lucas Natalicio Ferreira.</h3>
 <h1>JavaScript</h1>
   <h3> Bruno Tarantelli ,
-  Clayton Lopes , Cleber e Murilo Lopes.</h3>
+  Clayton Lopes , Cleber Moura e Murilo Lopes.</h3>
 
