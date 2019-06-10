@@ -39,7 +39,7 @@
     var maiorRegr
     var menorRegr
     var a;
-    var b;    
+    var b;
 function entrada(evt){
     evt.preventDefault();
     var valx = document.getElementById("independente").value;

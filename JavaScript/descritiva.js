@@ -722,7 +722,7 @@ function grafico() {
     Chart.defaults.global.defaultFontSize = 18;
     Chart.defaults.global.defaultFontColor = '#777';
 
-    let massPopChart = new Chart(grafico, {
+    let graficoEstatistica = new Chart(grafico, {
       type: [] = tipografico , // bar, horizontalBar, pie, line, doughnut, radar, polarArea , scatter
       data:{
         labels:[] = grafnomes,

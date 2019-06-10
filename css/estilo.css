@@ -42,7 +42,6 @@ input[type=email],input[type=password]{
     margin-top: 10px;
     font-size: 22px;
     padding: 100px 300px 0px 300px;
-    margin-bottom: 100px;
 }
 .txt-02{
     padding: 10px 30px;
@@ -248,6 +247,7 @@ form{
     font-size: 1.2rem;
     line-height: 1.7rem;
     color:rgb(20, 20, 20);
+    margin-bottom: 10%;
 }
 .form-core .label{
     margin-bottom: 10px;
@@ -289,8 +289,18 @@ button:active{
 .form-medidas{
     padding: 0px 40px 70px 25%;
 }
+form .quemS{
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    margin-left: 15%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    font-size: 20px;
+}
 .form-home{
     padding: 40px 100px 200px 80px;
+    margin-bottom: 5%;
 }
 .form-probabilidade{
     padding: 40px 100px 100px 25%;
@@ -328,6 +338,10 @@ button:active{
     position: relative;
     box-shadow: none;
 }
+.btn-link.ultimo{
+    width: 20%;
+    margin-left: 38%;
+}
 .dropdownP{
     display: block;
     margin: 0px;
@@ -337,6 +351,10 @@ button:active{
 }
 .dropdownP:hover{
     overflow: visible;
+}
+.titulo a{
+    text-decoration: none;
+    color: #000000;
 }
 .titulo{
     float: center;
@@ -491,7 +509,6 @@ div .projecao{
     }
     .txt-01{
         padding: 20px;
-        margin-bottom: 200px;
     }
 
     .btn-descritiva {
@@ -522,5 +539,9 @@ div .projecao{
         align-content: center;
         margin-right: 5%;
         margin-left: 0;
+    }
+    .quemS{
+        width: auto;
+        margin: auto;
     }
 }
